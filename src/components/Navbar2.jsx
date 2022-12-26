@@ -8,6 +8,7 @@ const Navbar2 = (p) => {
   function logoutfun(){
     setGlobalState({});
   }
+  console.log(globalState);
   return (
     <div id='nav2'>
         <div id='n2c1'>{p.name}</div>

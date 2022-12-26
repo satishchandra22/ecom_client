@@ -27,6 +27,7 @@ const Register = () => {
           setFail(true);
           console.log(err)});
     }
+    console.log(globalState);
     return (
       <div id='register'>
          <label htmlFor="uname">Username</label><br />

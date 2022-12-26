@@ -12,8 +12,9 @@ const Shop = () => {
   useEffect(()=>{
     axios.get(url).then((res)=>{
       setProductlist(res.data);
-    },[])
-  })
+      console.log(setGlobalState);
+    })
+  },[setGlobalState])
 
   return (
     <div>

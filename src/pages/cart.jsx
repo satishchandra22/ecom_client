@@ -11,14 +11,15 @@ const Cart = () => {
   useEffect(()=>{
      axios.get(`https://copper-puppy-garb.cyclic.app/api/cart/find/${globalState.userId}`,
      {headers:{
-      token: 'bearer'+' '+globalState.accessToken
+      token: 'bearer '+globalState.accessToken
   }}
      ).then(
       (res)=>{setCartList(res.data.products);
         console.log(res)
       }
      )
-  },[])
+  },[globalState.accessToken,globalState.userId])
+  console.log(setGlobalState);
   return (
     <div>
       <Navbar2  name={globalState.username}/>

@@ -20,13 +20,14 @@ const Product = (p) => {
             quantity:quantity
         }
     },{headers:{
-        token: 'bearer'+' '+globalState.accessToken
+        token: 'bearer '+globalState.accessToken
     }}).then(res=>console.log(res)).catch(err=>console.log(err));
   }
+  console.log(setGlobalState);
   return (
     <div id='productd' onMouseOver={hoverfun} onMouseLeave={outfun}>
         <div id='product'>
-        <img id='pimg' src={p.img} />
+        <img id='pimg' src={p.img} alt='' />
         <div id='ptitle'>{p.title}</div>
         <div id='pcost'>
             <span id='pscost'>${p.cost} </span><span id='psdcost'> ${p.dcost}</span>

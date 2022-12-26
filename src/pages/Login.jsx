@@ -21,6 +21,7 @@ const Login = () => {
         setFail(true);
         console.log(err)});
   }
+  console.log(globalState);
   return (
     <div id='login'>
        <label htmlFor="uname">Username</label><br />
